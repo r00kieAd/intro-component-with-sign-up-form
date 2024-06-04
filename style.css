@@ -35,10 +35,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: var(--main_width);
+    height: calc(var(--main_width) * 0.45);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* border: 1px solid black; */
 }
 
 #text-intro {
@@ -111,10 +113,6 @@ body {
 .inp input::placeholder {
     font-weight: 600;
     letter-spacing: 0.5px;
-}
-
-.inp input:focus {
-    border-color: var(--neutral-color);
 }
 
 .sub button {

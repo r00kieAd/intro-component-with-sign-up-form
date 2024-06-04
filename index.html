@@ -30,20 +30,22 @@
       <div class="user-form">
         <div class="form-container">
           <div class="firstname inp">
-            <input type="text" name="firstname" id="fs" placeholder="First Name"><br>
-            <span class="error e1">invalid firstname</span>
+            <input type="text" name="firstname" id="fs" placeholder="First Name" value=""><br>
+            <span class="error e1">Firstname cannot be empty</span>
+            <span class="error invalid">only alphabets allowed</span>
           </div>
           <div class="lastname inp">
-            <input type="text" name="lastname" id="ls" placeholder="Last Name"><br>
-            <span class="error e2">invalid lastname</span>
+            <input type="text" name="lastname" id="ls" placeholder="Last Name" value=""><br>
+            <span class="error e2">Lastname cannot be empty</span>
+            <span class="error invalid">only alphabets allowed</span>
           </div>
           <div class="emailaddr inp">
-            <input type="text" name="emailaddr" id="em" placeholder="Email Address"><br>
-            <span class="error e3">invalid email</span>
+            <input type="text" name="emailaddr" id="em" placeholder="Email Address" value=""><br>
+            <span class="error e3">Invalid email</span>
           </div>
           <div class="password inp">
-            <input type="text" name="password" id="ps" placeholder="Password"><br>
-            <span class="error e4">password length too short</span>
+            <input type="text" name="password" id="ps" placeholder="Password" value=""><br>
+            <span class="error e4">Password length too short</span>
           </div>
           <div class="sign-up-button sub">
             <button type="submit">CLAIM YOUR FREE TRIAL</button>
@@ -54,6 +56,8 @@
       </div>
     </section>
   </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
