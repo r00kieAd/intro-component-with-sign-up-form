@@ -1,0 +1,157 @@
+:root {
+    --main_width: clamp(40rem, 60vw, 70rem);
+    --text-container-width: calc(var(--main_width) * 0.60);
+    --form-container-width: calc(var(--main_width) * 0.40);
+    --main-border-radius: 10px;
+    --main-color: hsl(0, 100%, 74%);
+    --main-color-2: hsl(154, 59%, 51%);
+    --accent: hsl(248, 32%, 49%);
+    --neutral-color: hsl(249, 10%, 26%);
+    --neutral-color-2: hsl(246, 25%, 77%);
+    --main-font-size: clamp(15px, 0.8vw, 17px);
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    background: url('images/bg-intro-desktop.png');
+    background-size: cover;
+    background-color: var(--main-color);
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--main_width);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#text-intro {
+    position: relative;
+    width: var(--text-container-width);
+}
+
+.text-container {
+    width: calc(var(--text-container-width) * 0.80);
+    font-size: calc(var(--main-font-size));
+    color: white;
+}
+
+.text-container h1 {
+    font-size: calc(var(--main-font-size) + 32px);
+    font-weight: 700;
+    line-height: clamp(50px, 3.125vw, 65px);
+}
+
+.text-container p {
+    word-break: break-word;
+    font-weight: 600;
+    line-height: clamp(30px, 1.125vw, 40px);
+}
+
+#sign-up-form {
+    position: relative;
+    text-align: center;
+    width: var(--form-container-width);
+    font-size: var(--main-font-size);
+    transition: height 0.2s ease-out;
+}
+
+.free-trial-div {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    border-radius: var(--main-border-radius);
+    margin-bottom: 12px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.user-form {
+    background: white;
+    padding: 25px 20px;
+    border-radius: calc(var(--main-border-radius) - 3px);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.inp,
+.sub {
+    margin: 15px 0;
+}
+
+.inp input,
+.sub button {
+    width: 90%;
+    height: 40px;
+    border-radius: calc(var(--main-border-radius) - 3px);
+    border: 1px solid var(--neutral-color-2);
+    outline: none;
+    transition: border-color 0.2s ease-in, filter 0.2s ease-in;
+}
+
+.inp input {
+    padding: 0 10px 0 20px;
+    font-size: var(--main-font-size);
+}
+
+.inp input::placeholder {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.inp input:focus {
+    border-color: var(--neutral-color);
+}
+
+.sub button {
+    width: 100%;
+    margin-top: 10px;
+    border-color: var(--main-color-2);
+    background: var(--main-color-2);
+    line-height: 40px;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.sub button:hover {
+    filter: brightness(1.2);
+}
+
+.disclaimer {
+    font-size: calc(var(--main-font-size) - 4px);
+    font-weight: 500;
+    color: var(--neutral-color-2);
+}
+
+.terms {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.error {
+    float: right;
+    margin: 5px 15px;
+    font-size: calc(var(--main-font-size) - 6px);
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    font-style: italic;
+    display: none;
+    transition: display 0.2s ease-out;
+    color: var(--main-color);
+}

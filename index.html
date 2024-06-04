@@ -5,10 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up Page</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <section id="main">
+  <section id="main" class="poppins-regular">
     <section id="text-intro">
       <div class="text-container">
         <h1>Learn to Code by watching others</h1>
@@ -18,29 +25,30 @@
     </section>
     <section id="sign-up-form">
       <div class="free-trial-div">
-        <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
+        <p class="poppins-thin"><b>Try it free 7 days</b> then $20/mo. thereafter</p>
       </div>
       <div class="user-form">
         <div class="form-container">
-          <div class="firstname name">
-            <input type="text" name="firstname" id="fs">
+          <div class="firstname inp">
+            <input type="text" name="firstname" id="fs" placeholder="First Name"><br>
             <span class="error e1">invalid firstname</span>
           </div>
-          <div class="lastname name">
-            <input type="text" name="lastname" id="ls">
+          <div class="lastname inp">
+            <input type="text" name="lastname" id="ls" placeholder="Last Name"><br>
             <span class="error e2">invalid lastname</span>
           </div>
-          <div class="emailaddr name">
-            <input type="text" name="emailaddr" id="em" placeholder="email@example/com">
+          <div class="emailaddr inp">
+            <input type="text" name="emailaddr" id="em" placeholder="Email Address"><br>
             <span class="error e3">invalid email</span>
           </div>
-          <div class="password name">
-            <input type="text" name="password" id="ps">
-            <span class="error e4">password should contain at least 8 digits</span>
+          <div class="password inp">
+            <input type="text" name="password" id="ps" placeholder="Password"><br>
+            <span class="error e4">password length too short</span>
           </div>
-          <div class="sign-up-button">
-            <button type="submit">CLAIM YOUR FREE free-trial-div</button>
-            <p class="disclaimer">By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span></p>
+          <div class="sign-up-button sub">
+            <button type="submit">CLAIM YOUR FREE TRIAL</button>
+            <p class="disclaimer">By clicking the button, you are agreeing to our <span class="terms">Terms and
+                Services</span></p>
           </div>
         </div>
       </div>
