@@ -153,3 +153,37 @@ body {
     transition: display 0.2s ease-out;
     color: var(--main-color);
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        background: url('images/bg-intro-mobile.png');
+        background-color: var(--main-color);
+    }
+    
+    #main {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #text-intro {
+        width: inherit;
+        text-align: center;
+    }
+
+    .text-container {
+        width: inherit;
+        font-size: calc(var(--main-font-size));
+    }
+
+    #sign-up-form {
+        width: inherit;
+        font-size: var(--main-font-size);
+    }
+}
