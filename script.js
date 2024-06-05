@@ -24,26 +24,28 @@ function showErr(e) {
 
 $('.sub button').click(
     function() {
-        $('.inp input').each(
-            function (i) {
-                i++;
-                const input_val = $(this).val();
-                if (input_val == "") {
-                    showErr(this);
-                    $(`.e${i}`).show();
-                } else {
-                    if (!/^[a-zA-Z]+$/.test(input_val.toString()) && i <= 2) {
-                        showErr(this);
-                        $(`.e${i}`).next().show();
-                    } else {
-                        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input_val.toString())) {
-                            showErr(this);
-                            $(`.e${i}`).next().show();
-                        }
+        const inputs = document.querySelectorAll('.inp input');
+        i = 1;
+        inputs.forEach((e) => {
+            const text = e.value;
+            if (text == "") {
+                $(`.e${i}`).show();
+                showErr($('.inp input').eq(i-1));
+            } else {
+                if (i <= 2) {
+                    if (!/^[a-zA-Z]+$/.test(text)) {
+                        $(`.invalid${i}`).show();
+                        showErr($('.inp input').eq(i-1)); 
                     }
-                    
+                }
+                if (i == 3) {
+                    if (!/^\S+@\S+\.\S+$/.test(text)) {
+                        $(`.e${i}`).show();
+                        showErr($('.inp input').eq(i-1)); 
+                    }
                 }
             }
-        );
+            i++;
+        })
     }
 )
